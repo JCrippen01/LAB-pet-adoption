@@ -1,0 +1,25 @@
+#app {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+/* #show-btn {
+  background-color: mediumpurple;
+  color: white;
+  font-weight: 700;
+}
+.btn btn-primary{
+  background-color: palegoldenrod;
+  color: darkgoldenrod;
+  font-weight: 700;
+}
+.bg--dog {
+  background-color: lightblue;
+  color: blue;
+  font-weight: 600;
+}
+.bg--dino {
+  background-color: lightgreen;
+  color: darkgreen;
+  font-weight: 600;
+}  */

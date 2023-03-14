@@ -5,7 +5,7 @@ const pets = [
       color: "Green",
       specialSkill: "Gives sincere apologies.",
       type: "cat",
-      imageUrl: "http://kittentoob.com/wp-content/uploads/2015/06/funny-cat-with-a-towel.jpg",
+      imageUrl: "https://source.unsplash.com/collection/139386/780x400/?sig=",
     },
     {
         id: 2,
@@ -37,7 +37,7 @@ const pets = [
       color: "Brown",
       specialSkill: "Comfortable in the outdoors for up to eight hours.",
       type: "cat",
-      imageUrl: "http://www.catster.com/wp-content/uploads/2017/08/A-fluffy-cat-looking-funny-surprised-or-concerned.jpg"
+      imageUrl: "https://source.unsplash.com/collection/139386/780x400/?sig="
     },
     {
       id: 6,
@@ -53,7 +53,7 @@ const pets = [
       color: "Yellow",
       specialSkill: "Able to stop chewing ice or whistling on request.",
       type: "cat",
-      imageUrl: "https://i.pinimg.com/originals/9d/da/3e/9dda3e5fd2b9886fc3d13ee47f52e8a0.jpg"
+      imageUrl: "https://source.unsplash.com/collection/139386/780x400/?sig="
     },
     {
       id: 8,
@@ -69,7 +69,7 @@ const pets = [
       color: "Brown",
       specialSkill: "Adept at talking self and others out of fights.",
       type: "cat",
-      imageUrl: "https://tailandfur.com/wp-content/uploads/2015/09/40-Amazing-Cat-Funny-Moment-Pictures-Feature-Image.jpg"
+      imageUrl: "https://source.unsplash.com/collection/139386/780x400/?sig="
     },
     {
       id: 10,
@@ -77,7 +77,7 @@ const pets = [
       color: "Blue",
       specialSkill: "Listens attentively to boring stories.",
       type: "cat",
-      imageUrl: "https://i.pinimg.com/originals/04/54/92/0454926d39eeb420f4f01948e94e9e41.jpg"
+      imageUrl: "https://source.unsplash.com/collection/139386/780x400/?sig="
     },
     {
       id: 11,
@@ -109,7 +109,7 @@ const pets = [
       color: "Brown",
       specialSkill: "Always up for dessert.",
       type: "cat",
-      imageUrl: "http://3.bp.blogspot.com/-RzIFLsIO-XQ/UFoMLOT66JI/AAAAAAAAVps/JRF98hdA9S8/s640/funny-cat-pictures-016-027.jpg"
+      imageUrl: "https://source.unsplash.com/collection/139386/780x400/?sig="
     },
     {
       id: 15,
@@ -117,7 +117,7 @@ const pets = [
       color: "Red",
       specialSkill: "Burps minimally.",
       type: "cat",
-      imageUrl: "http://cathumor.net/wp-content/uploads/2013/12/cat-humor-funny-karate-cat-2.jpg"
+      imageUrl: "https://source.unsplash.com/collection/139386/780x400/?sig="
     },
     {
       id: 16,
@@ -133,7 +133,7 @@ const pets = [
       color: "Yellow",
       specialSkill: "Does not freak out if you haven’t seen his favorite movie (The Big Lebowski).",
       type: "cat",
-      imageUrl: "http://www.funnycatsite.com/pictures/Close_Up_Yawn.jpg"
+      imageUrl: "https://source.unsplash.com/collection/139386/780x400/?sig="
     },
     {
       id: 18,
@@ -157,7 +157,7 @@ const pets = [
       color: "Black",
       specialSkill: "Uses litter box at appropriate hours.",
       type: "cat",
-      imageUrl: "http://www.funnycatsite.com/pictures/Lazy_White_Cat.jpg"
+      imageUrl: "https://source.unsplash.com/collection/139386/780x400/?sig="
     },
     {
       id: 21,
@@ -173,7 +173,7 @@ const pets = [
       color: "Orange",
       specialSkill: "Is comfortable with jokes about his receding hairline.",
       type: "cat",
-      imageUrl: "http://funnyanimalphoto.com/wp-content/uploads/2013/08/cat_caught_mouse_thegatewaypundit.jpg"
+      imageUrl: "https://source.unsplash.com/collection/139386/780x400/?sig="
     },
     {
         id: 23,
@@ -197,7 +197,7 @@ const pets = [
       color: "Red",
       specialSkill: "Knows the words to 4 rap songs.",
       type: "cat",
-      imageUrl: "http://funbk.s3.amazonaws.com/wp-content/uploads/2016/06/funny-cat-video-which-will-make-you-laugh-louder.jpg"
+      imageUrl: "https://source.unsplash.com/collection/139386/780x400/?sig="
     },
     {
         id: 26,
@@ -221,7 +221,7 @@ const pets = [
       color: "Purple",
       specialSkill: "Dances when he has to.",
       type: "cat",
-      imageUrl: "https://tailandfur.com/wp-content/uploads/2016/03/40-Scary-and-Funny-Cat-Pictures-8.jpg"
+      imageUrl: "https://source.unsplash.com/collection/139386/780x400/?sig="
     },
     {
         id: 29,
@@ -229,7 +229,7 @@ const pets = [
       color: "Green",
       specialSkill: "Gives hugs with appropriate pressure and for the right length of time.",
       type: "cat",
-      imageUrl: "http://img.izismile.com/img/img2/20090219/cats_02.jpg"
+      imageUrl: "https://source.unsplash.com/collection/139386/780x400/?sig="
     },
     {
         id: 30,
@@ -240,3 +240,72 @@ const pets = [
       imageUrl: "http://lsae2.iypcdn.com/static//modules/uploads/photos/language1/dino-live-22.jpg?119"
     }
   ];
+
+ 
+  const renderToDom = (divId, htmlToRender) => {
+    const selectedDiv = document.querySelector(divId);
+    selectedDiv.innerHTML = htmlToRender;
+  };
+
+  const cardsOnDom = (pets) =>  {
+    let domString = "";
+    for (const pet of pets) {
+      // CARD FROM BOOTSTRAP: https://getbootstrap.com/docs/5.1/components/card/#example Removed the button
+        domString += `<div class="card" style="width: 28rem;">
+          <div class="container pt-1">
+            <div class="card-header text-center fw-bold">
+              <h5 class="card-title">${pet.name}</h5>
+          </div>    
+        </div>
+        <div class="card-body">
+          <img class="image-fluid" src="${pets.imageUrl}" alt="Card image cap">
+          <p class="card-text text-center fw-bold">${pet.color}</p>
+          <p class="card-text text-justified">${pet.specialSkill}</p>
+        </div>
+        <div class="card-footer">
+          <h5 class="pet-type text-center fw-bold">${pet.type}</h5>
+        </div>
+      </div>`;
+    };
+    renderToDom("#app", domString);
+  };
+
+  //button filter function
+  const filter = (petType, typeString) => {
+    const petTypeArray = [];
+
+    for (const pet of petType) {
+      if (pet.type === typeString) {
+        petTypeArray.push(pet);
+      }
+    }
+  
+    return petTypeArray;
+  }
+  //show all of pets array objects.
+  const showAllButton = document.querySelector("#showAll");
+
+  showAllButton.addEventListener('click', () => {
+    cardsOnDom(pets);
+  });
+  //filter cat from button event.
+  const catButton = document.querySelector("#cat");
+  catButton.addEventListener('click', ()  => {
+    const cats = filter(pets, "cat");
+    cardsOnDom(cats);
+  })
+  //filter dog by button event.
+  const dogButton = document.querySelector("#dog");
+  dogButton.addEventListener('click', ()  => {
+    const dogs = filter(pets, "dog");
+    cardsOnDom(dogs);
+  })
+  //filter dino by button event.
+  const dinoButton = document.querySelector("#dino");
+  dinoButton.addEventListener('click', ()  => {
+    const dino = filter(pets, "dino");
+    cardsOnDom(dino)
+   
+  })
+  targetingApp.innerHTML = domString;
+  
